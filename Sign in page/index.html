@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- <h1>Hello World</h1> -->
+    <div class="login-container">
+            <form class="login-form" action="" method="">
+                <ul class="login-nav">
+                <li class="login-nav__item active">
+                    <a href="#">Sign In</a>
+                </li>
+                <li class="login-nav__item">
+                    <a href="#">Sign Up</a>
+                </li>
+            </ul>
+            <label for="login-input-user" class="login__label">
+                Username
+            </label>
+            <input type="text" id="login-input-user" class="login__input" placeholder="Username or Email *" required>
+
+            <label for="login-input-password" class="login__label">
+                Password
+            </label>
+            <input type="password" id="login-input-password" class="login__input" placeholder="Password *" required>
+            <label for="login-sign-up" class="login__label--checkbox">
+                <input type="checkbox" id="login-sign-up" class="login__input--checkbox" required>
+                Remeber Me
+            </label>
+            <button class="login__submit" disabled>Login</button>
+        </form>
+        <a href="#" class="login__forgot">Forgot Password</a>
+        <a href="#" class="create__Account">Create Account</a>
+
+    </div>
+    
+</body>
+</html>
