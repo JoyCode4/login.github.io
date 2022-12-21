@@ -111,40 +111,6 @@ body{
 }
 
 /* Actual Content */
-/* Login Container */
-.login-container{
-    display: block;
-    position: relative;
-    z-index: 1;
-    margin: 4rem auto 0;
-    padding: 5rem 4rem 0 4rem;
-    width: 100%;
-    max-width: 525px;
-    min-height: 620px;
-    background-color: rgba(202, 85, 228, 0.466);
-    box-shadow: 0 50px 70px -20px rgba(0,0,0,0.85);
-}
-
-.login-container:after{
-    content:"";
-    display: inline-block;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: radial-gradient(ellipse at left bottom,rgba(44, 47, 130, 0.7) 44%,rgba(199, 132, 199, 0.7) 100%);
-    box-shadow: 0 -20px 150px -20px rgba(0,0,0,0.5);
-}
-
-/* login Form */
-.login-form{
-    position: relative;
-    z-index:1;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
-}
 
 /* Login navigation bar */
 
@@ -203,7 +169,48 @@ body{
     transition: all .20s ease;
 }
 
-/* login labels and inputs  */
+
+/* Login Container & Signup Container */
+.login-container,
+.signup-container{
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: 4rem auto 0;
+    padding: 5rem 4rem 0.1rem 4rem;
+    width: 100%;
+    max-width: 525px;
+    min-height: 620px;
+    background-color: rgba(202, 85, 228, 0.466);
+    box-shadow: 0 50px 70px -20px rgba(0,0,0,0.85);
+}
+
+
+
+.login-container:after,
+.signup-container:after{
+    content:"";
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(ellipse at left bottom,rgba(44, 47, 130, 0.7) 44%,rgba(199, 132, 199, 0.7) 100%);
+    box-shadow: 0 -20px 150px -20px rgba(0,0,0,0.5);
+}
+
+/* login Form & signup Form */
+.login-form,.signup-form{
+    position: relative;
+    z-index:1;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+
+/* login labels and inputs & signup inputs */
 
 .login__label{
     display:block;
@@ -239,9 +246,24 @@ body{
     background-color: rgba(255,255,255,.5);
     letter-spacing: 1px;
 }
+.signup__input{
+    color:#fff;
+    font-size: 1.15rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 1.5rem;
+    background-color: rgba(255,255,255,.5);
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+}
 
 .login__input:hover,
-.login__input:focus{
+.login__input:focus,
+.signup__input:hover,
+.signup__input:focus
+{
     color: #fff;
     border: 2px solid rgba(255, 255, 255, 0.5);
     background-color:transparent;
@@ -258,7 +280,7 @@ body{
     margin:0;
 }
 
-.login__submit{
+.login__submit,.signup__submit{
     color:#fff;
     font-size:1rem;
     font-family: "Montserrat",sans-serif;
@@ -274,11 +296,11 @@ body{
     cursor: pointer;
 }
 
-.login__submit:hover{
+.login__submit:hover,.signup__submit:hover{
     background-color: rgba(17,97,237,1);
 }
 
-.login__forgot,.create__Account{
+.login__forgot,.create__Account,.login{
     display:block;
     width: 8.5rem;
     position: relative;
@@ -290,7 +312,7 @@ body{
     position: relative;
     z-index: 1;
 }
-.login__forgot:after,.create__Account:after{
+.login__forgot:after,.create__Account:after,.login:after{
     content:"";
     display: inline-block;
     position: absolute;
@@ -301,11 +323,16 @@ body{
     transition: all 0.20s ease;
 }
 
-.login__forgot:hover:after,.create__Account:hover:after{
+.login__forgot:hover:after,.create__Account:hover:after,.login:hover:after{
     right:0;
     height: 2px;
     bottom: -3px;
     width:100%;
     background-color: #fff;
     color:rgb(240, 243, 248);
+}
+
+/* Disable CSS */
+.disabled{
+    display: none;
 }

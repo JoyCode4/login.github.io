@@ -23,15 +23,15 @@
     </div>
     <!-- <h1>Hello World</h1> -->
     <div class="login-container">
+        <ul class="login-nav">
+            <li class="login-nav__item active">
+                <a href="#">Sign In</a>
+            </li>
+            <li class="login-nav__item">
+                <a href="#">Sign Up</a>
+            </li>
+        </ul>
         <form class="login-form" action="" method="post">
-            <ul class="login-nav">
-                <li class="login-nav__item active">
-                    <a href="#">Sign In</a>
-                </li>
-                <li class="login-nav__item">
-                    <a href="#">Sign Up</a>
-                </li>
-            </ul>
             <label for="login-input-user" class="login__label">
                 Username
             </label>
@@ -45,10 +45,20 @@
                 <input type="checkbox" id="login-sign-up" class="login__input--checkbox" required>
                 Remeber Me
             </label>
-            <button class="login__submit" disabled>Login</button>
+            <button class="login__submit">Login</button>
         </form>
         <a href="#" class="login__forgot">Forgot Password</a>
         <a href="#" class="create__Account">Create Account</a>
+        <form class="signup-form" action="" method="post">
+            <input type="text" id="signup-input-name" class="signup__input" placeholder="Name*" required>
+            <input type="text" id="signup-input-user" class="signup__input" placeholder="Username*" required>
+            <input type="email" id="signup-input-email" class="signup__input" placeholder="Email*" required>
+            <input type="password" id="signup-input-password" class="signup__input" placeholder="Password*" required>
+            <input type="password" id="signup-input-user" class="signup__input" placeholder="Confirm Password*" required>
+            <input type="number" id="signup-input-user" class="signup__input" placeholder="Mobile*" required>
+            <button class="signup__submit">Create Account</button>
+        </form>
+        <a href="#" class="login">Login</a>
     </div>
     
     
