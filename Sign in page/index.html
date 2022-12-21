@@ -24,14 +24,14 @@
     <!-- <h1>Hello World</h1> -->
     <div class="login-container">
         <ul class="login-nav">
-            <li class="login-nav__item active">
-                <a href="#">Sign In</a>
+            <li id="nav__item_login" class="login-nav__item active">
+                <a id="login" href="#">Login</a>
             </li>
-            <li class="login-nav__item">
-                <a href="#">Sign Up</a>
+            <li id="nav__item_signup" class="login-nav__item">
+                <a id="signup" href="#">Sign Up</a>
             </li>
         </ul>
-        <form class="login-form" action="" method="post">
+        <form id="login-form" class="login-form" action="" method="post">
             <label for="login-input-user" class="login__label">
                 Username
             </label>
@@ -47,9 +47,9 @@
             </label>
             <button class="login__submit">Login</button>
         </form>
-        <a href="#" class="login__forgot">Forgot Password</a>
-        <a href="#" class="create__Account">Create Account</a>
-        <form class="signup-form" action="" method="post">
+        <a href="#" id="login__forgot" class="login__forgot">Forgot Password</a>
+        <a href="#" id="create__Account" class="create__Account">Create Account</a>
+        <form id="signup-form" class="signup-form disabled" action="" method="post">
             <input type="text" id="signup-input-name" class="signup__input" placeholder="Name*" required>
             <input type="text" id="signup-input-user" class="signup__input" placeholder="Username*" required>
             <input type="email" id="signup-input-email" class="signup__input" placeholder="Email*" required>
@@ -58,9 +58,9 @@
             <input type="number" id="signup-input-user" class="signup__input" placeholder="Mobile*" required>
             <button class="signup__submit">Create Account</button>
         </form>
-        <a href="#" class="login">Login</a>
+        <a href="#" id="loginLink" class="login disabled">Login</a>
     </div>
     
-    
+    <script src="script.js"></script>
 </body>
 </html>
